@@ -1,32 +1,56 @@
 MOTORS
-1  - frontRight (Reversed)
-2  - backRight (Reversed)
+1  - backLeft
+2  - right (Reversed)
 3  - frontLeft
-4  - backLeft
-5  - arm1 (Reversed)
-6  - arm2 (Reversed)
+4  - hook
+5  - arm1
+6  - arm2
 7  - exender
-8  - hook
+8  - wench (Reversed)
 9  - liftJack1
 10 - liftJack2 (Reversed)
+
+SENSORS
+Digital:
+1 - Bumper
+Analog:
+1 - line follower
+2 - Potentiometer
 
 Left Joystick
 Ch2 - motor fR bR goes backwards and forwards
 Right Jostick
 Ch3 - motor frontLeft backLeft goes backwards and forwards
 
+8U - runs forward at half speed until bump sensor is pressed
 8D - extender runs positive @ 127
 8R - extender runs at @ -127
 
 7L - runs arm positive @ 127
 7D - runs arm @ -127
+7U - runs arm positive @ 127 & wench positive @ 127
+7R - runs arm negative @ 127
 
-6D - Hook runs +64
-6U - Hook runs -64
+6D - Hook runs +127
+6U - Hook runs -127
 
 5U - LiftJack motors running -64
 5D - LiftJack motors running 64
 
+TIME TESTS:
+6 Tiles
+1) 5.25
+2) 5.05
+3) 4.93
+4) 4.90
+5)
+
+360 Turn:
+1) 4.10 
+2)
+3)
+4)
+5)
 
 AUTONOMOUS GAME PLAN
 get two BB and 3 LB on the floor over the bump into the middle zone
