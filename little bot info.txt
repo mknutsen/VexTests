@@ -15,14 +15,15 @@ Digital:
 1 - Bumper
 Analog:
 1 - line follower
-2 - Potentiometer
+2 - Potentiometer:
+  - all the way LEFT for BLUE
+  - all the way RIGHT for RED 
 
 Left Joystick
 Ch2 - motor fR bR goes backwards and forwards
 Right Jostick
 Ch3 - motor frontLeft backLeft goes backwards and forwards
 
-8U - runs forward at half speed until bump sensor is pressed
 8D - extender runs positive @ 127
 8R - extender runs at @ -127
 

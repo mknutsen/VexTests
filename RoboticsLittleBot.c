@@ -37,7 +37,7 @@ void pre_auton()
 {
   // Set bStopTasksBetweenModes to false if you want to keep user created tasks running between
   // Autonomous and Tele-Op modes. You will need to manage all user created tasks if set to false
-	if(sensorValue(redBlueSwitch) < 50){
+	if(sensorValue(redBlueSwitch) < SWITCH){
 		red = true;
 	}
 	else{
@@ -58,94 +58,66 @@ void pre_auton()
 task autonomous()
 {
 	if(red){
-		while(vexRT[Btn8D] == 0);
 		motor[hook] = -127;
 		wait10Msec(60);
 		motor[hook] = 64;
 		wait10Msec(200);
 		motor[hook] = 0;
-		while(vexRT[Btn8D] == 0);
 		turnCW(159, 127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.3,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCCW(161, 127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.1,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(.7,-127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCW(125,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.1,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCCW(125,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.4,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(.7,-127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCCW(45,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.5,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 	}
 	else{
-		while(vexRT[Btn8D] == 0);
 		motor[hook] = -127;
 		wait10Msec(60);
 		motor[hook] = 64;
 		wait10Msec(200);
 		motor[hook] = 0;
-		while(vexRT[Btn8D] == 0);
 		turnCCW(159, 127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.3,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCW(161, 127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.1,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(.7,-127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
-		turnCW(125,127);
-		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
-		move(1.1,127);
-		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCCW(125,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
+		move(1.1,127);
+		wait10Msec(1);
+		turnCW(125,127);
+		wait10Msec(1);
 		move(1.4,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(.7,-127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		turnCW(45,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 		move(1.5,127);
 		wait10Msec(1);
-		while(vexRT[Btn8D] == 0);
 	}
 }
 
