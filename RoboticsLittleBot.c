@@ -37,12 +37,7 @@ void pre_auton()
 {
   // Set bStopTasksBetweenModes to false if you want to keep user created tasks running between
   // Autonomous and Tele-Op modes. You will need to manage all user created tasks if set to false
-	if(sensorValue(redBlueSwitch) < SWITCH){
-		red = true;
-	}
-	else{
-		red = false;
-	}
+
   bStopTasksBetweenModes = true;
 }
 
@@ -57,6 +52,12 @@ void pre_auton()
 
 task autonomous()
 {
+	if(sensorValue(redBlueSwitch) < SWITCH){
+		red = true;
+	}
+	else{
+		red = false;
+	}
 	if(red){
 		motor[hook] = -127;
 		wait10Msec(60);
