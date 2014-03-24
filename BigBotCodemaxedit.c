@@ -151,18 +151,47 @@ void balls( int count ){
 }
 
 void auto1(){
-	moveStrafe( 0.85 , -127 );
-	moveUp( 3.8 , 100 );
-	pointTurn( ( 0.25 * 20 * pi ) );
+	wait10Msec(2);
+	pointTurn( ( 0.5 * 20 * pi ) );
+	wait10Msec(2);
+	moveUp(1,127);
+	wait10Msec(2);
 	balls( 100 );
+	wait10Msec(2);
+	motor[topArm] = 127;
+	wait10Msec(100);
+	motor[topArm] = 0;
+	wait10Msec(2);
+	moveUp(0.2, -127);
+	wait10Msec(2);
+	moveStrafe(3, 127);
+	wait10Msec(2);
+	moveUp(0.2, 127);
+	wait10Msec(2);
+	motor[topArm] = 127;
+	wait10Msec(100);
+	motor[topArm] = 0;
 }
 
 void auto2(){
-	moveStrafe( -0.85 , 127 );
-	moveUp( 3.5 , 100 );
-	pointTurn( ( 0.25 * 20 * pi ) );
+	wait10Msec(2);
+	moveUp(1,127);
+	wait10Msec(100);
 	motor[conveyer1]=motor[conveyer2]=-127;
-
+	wait10Msec(2);
+	motor[topArm] = 127;
+	wait10Msec(100);
+	motor[topArm] = 0;
+	wait10Msec(100);
+	moveUp(0.2, -127);
+	wait10Msec(2);
+	moveStrafe(3, -127);
+	wait10Msec(2);
+	moveUp(0.2, 127);
+	wait10Msec(2);
+	motor[topArm] = 127;
+	wait10Msec(100);
+	motor[topArm] = 0;
 }
 
 void pre_auton()
