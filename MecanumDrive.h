@@ -22,6 +22,8 @@ static struct
 } t_axisSetting;
 
 // Gets references to bot motors
+// In order, params are Front Right, Front Left,
+// Bottom Right, Bottom Left
 void initMotors(int* FR, int* FL, int* BR, int* BL)
 {
 	frontRight = FR;
