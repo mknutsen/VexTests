@@ -3,6 +3,11 @@
 
 #define MOTOR_MAX 127
 
+/*
+ * Mecanum wheel drive function
+ * Author: Evan Rittenhouse <emanguy1@gmail.com>
+ */
+
 // Store motors here for easy access
 int* frontRight;
 int* frontLeft;
