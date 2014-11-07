@@ -33,33 +33,33 @@ void initMotors(int* FR, int* FL, int* BR, int* BL)
 }
 
 // Ensure the value is not greater than the maximum motor value
-void threshhold(int& value)
+void threshhold(int* value)
 {
-	if (abs(value) > MOTOR_MAX)
+	if (abs(*value) > MOTOR_MAX)
 	{
 		// Set to +/- MOTOR_MAX based on sign of value
-		value = MOTOR_MAX * abs(value) / value;
+		*value = MOTOR_MAX * abs(value) / value;
 	}
 }
 
 // Set the forward movement speed
 void setForward(int speed)
 {
-	threshhold(speed);
+	threshhold(&speed);
 	t_axisSetting.i_forward = speed;
 }
 
 // Set the strafe movement speed
 void setStrafe(int speed)
 {
-	threshhold(speed);
+	threshhold(&speed);
 	t_axisSetting.i_strafe = speed;
 }
 
 // Set the rotation speed
 void setRotate(int speed)
 {
-	threshhold(speed);
+	threshhold(&speed);
 	t_axisSetting.i_rotate = speed;
 }
 
